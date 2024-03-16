@@ -61,7 +61,7 @@ def set_background(image_url):
 
 if __name__ == '__main__':
   # Set the background
-    set_background('https://media.istockphoto.com/id/1311148884/vector/abstract-globe-background.jpg?s=612x612&w=0&k=20&c=9rVQfrUGNtR5Q0ygmuQ9jviVUfrnYHUHcfiwaH5-WFE=')
+    set_background('https://img.freepik.com/free-photo/3d-abstract-background-with-flowing-dots-digital-landscape-modern-connections_1048-10497.jpg?size=626&ext=jpg&uid=R21978110&ga=GA1.1.1387133310.1702014596&semt=ais')
     #st.title('Fake News Classification App')
       # Header of the page
     html_temp = """
