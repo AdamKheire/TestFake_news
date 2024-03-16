@@ -92,7 +92,8 @@ if __name__ == '__main__':
     sentence = st.text_area("", "", height=200, key="textarea",)    
     #sentence = st.text_area("", "", height=200,)
     # Prediction button and Reset button in the same row
-    col1, col2 = st.beta_columns(2)
+# Prediction button and Reset button in the same row
+    col1, col2 = st.columns(2)
     with col1:
         predict_btt = st.button("Predict")
     with col2:
