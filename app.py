@@ -61,7 +61,7 @@ def set_background(image_url):
 
 if __name__ == '__main__':
   # Set the background
-    set_background('https://cdn.pixabay.com/photo/2020/02/26/11/24/fake-news-4881488_1280.jpg')
+    set_background('https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs44159-023-00183-y/MediaObjects/44159_2023_183_Figa_HTML.png')
     #st.title('Fake News Classification App')
       # Header of the page
     html_temp = """
