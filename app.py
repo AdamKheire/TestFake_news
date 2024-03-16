@@ -62,10 +62,25 @@ def set_background(image_url):
 if __name__ == '__main__':
   # Set the background
     set_background('https://cdn.pixabay.com/photo/2020/02/26/11/24/fake-news-4881488_1280.jpg')
-    
+    # CSS for styling the text area
+    st.markdown(
+        """
+        <style>
+        .text-area {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     st.title('Fake News Classification App')
     st.subheader("Enter your news content here")
-    sentence = st.text_area("", "",height=200)
+    # Text area with custom styling
+    sentence = st.text_area("", "", height=200, class_='text-area')
     predict_btt = st.button("Predict")
     if predict_btt:
         prediction_class = fake_news(sentence)
