@@ -62,7 +62,15 @@ def set_background(image_url):
 if __name__ == '__main__':
   # Set the background
     set_background('https://cdn.pixabay.com/photo/2020/02/26/11/24/fake-news-4881488_1280.jpg')
-    st.title('Fake News Classification App')
+    #st.title('Fake News Classification App')
+      # Header of the page
+    html_temp = """
+    <div style ="background-color:orange;padding:13px">
+    <h1 style ="color:white;text-align:center;">Fake News Prediction</h1>
+    </div>
+    """
+    st.markdown(html_temp, unsafe_allow_html=True)
+    
     st.subheader("Enter your news content here")
     # Text area with custom styling
     sentence = st.text_area("", "", height=200,)
