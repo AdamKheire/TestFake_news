@@ -14,4 +14,4 @@ The web app was built in Python using the following libraries:
 * scikit-learn
 * pickle
 * NLP tools(stemming, tookin, vectorizing)
-* 
+  
