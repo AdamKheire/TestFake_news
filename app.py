@@ -64,8 +64,7 @@ if __name__ == '__main__':
     set_background('https://cdn.pixabay.com/photo/2020/02/26/11/24/fake-news-4881488_1280.jpg')
     
     st.title('Fake News Classification App')
-    st.subheader("Input the News content below")
-    sentence = st.text_area("Enter your news content here", "", height=200)
+    st.subheader("Enter your news content here")
     predict_btt = st.button("Predict")
     if predict_btt:
         prediction_class = fake_news(sentence)
