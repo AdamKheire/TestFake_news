@@ -112,4 +112,4 @@ if __name__ == '__main__':
                 st.error('Invalid prediction result')
     # Reset text area if Reset button is clicked
     if reset_btt:
-        sentence.strip():
+        sentence.strip()
