@@ -70,8 +70,8 @@ if __name__ == '__main__':
     if predict_btt:
         prediction_class = fake_news(sentence)
         if prediction_class == 0:
-            st.success('Fake News')
+            st.warning('Fake News  ❌')
         elif prediction_class == 1:
-            st.warning('Real News')
+            st.success('Real News ✅ ')
         else:
             st.error('Invalid prediction result')
