@@ -61,7 +61,7 @@ def set_background(image_url):
 
 if __name__ == '__main__':
   # Set the background
-    set_background('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.jou.ufl.edu%2Finsights%2Fuser-perceptions-and-trust-of-fake-news-detection-technology%2F&psig=AOvVaw0BG2D5QbUisowhDRRC1g2c&ust=1710664523821000&source=images&cd=vfe&opi=89978449&ved=2ahUKEwiwoLmLsPiEAxUDSEEAHUyPBX0QjRx6BAgAEBc')
+    set_background('https://www.jou.ufl.edu/wp-content/uploads/2020/11/Fake-News-Graphic.jpg')
     #st.title('Fake News Classification App')
       # Header of the page
     html_temp = """
