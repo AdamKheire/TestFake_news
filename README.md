@@ -2,7 +2,8 @@
 
 # Fake News Detection web app deployed on Streamlit  Cloud Community
 
-The deployed web app is live at https://fakenewsdt.streamlit.app/
+The deployed web app is live at https://fakenewscl.streamlit.app/
+
 
 This web app predicts wether the News is Real or fake the input parameter of this project is (text/article of the news).
 
