@@ -38,7 +38,7 @@ def fake_news(news):
     return prediction[0]
 
 if __name__ == '__main__':
-        # CSS for background image
+   # CSS for background image
     st.markdown(
         """
         <style>
