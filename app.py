@@ -5,7 +5,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
-import base64
+
 
 # Download NLTK resources
 nltk.download('stopwords')
@@ -38,7 +38,7 @@ def fake_news(news):
     return prediction[0]
 
 if __name__ == '__main__':
-   # CSS for background image
+    # CSS for background image
     st.markdown(
         """
         <style>
