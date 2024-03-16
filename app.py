@@ -61,7 +61,7 @@ def set_background(image_url):
 
 if __name__ == '__main__':
   # Set the background
-    set_background('https://www.jou.ufl.edu/wp-content/uploads/2020/11/Fake-News-Graphic.jpg')
+    set_background('https://img.freepik.com/free-vector/gradient-breaking-news-background_23-2151142406.jpg?size=626&ext=jpg&ga=GA1.1.1387133310.1702014596&semt=ais')
     #st.title('Fake News Classification App')
       # Header of the page
     html_temp = """
