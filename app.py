@@ -1,13 +1,17 @@
 import streamlit as st
 import pickle
 import re
+import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
+
+# Download NLTK resources
+nltk.download('stopwords')
+
+# Initialize NLTK objects
 port_stem = PorterStemmer()
 vectorization = TfidfVectorizer()
-
-
 
 # Load the logistic regression model
 with open('model.pkl', 'rb') as file:
@@ -30,19 +34,18 @@ def fake_news(news):
     input_data=[news]
     vector_form1=vector_form.transform(input_data)
     prediction = load_model.predict(vector_form1)
-    return prediction
-
-
+    return prediction[0]
 
 if __name__ == '__main__':
-    st.title('Fake News Classification app ')
+    st.title('Fake News Classification App')
     st.subheader("Input the News content below")
-    sentence = st.text_area("Enter your news content here", "",height=200)
-    predict_btt = st.button("predict")
+    sentence = st.text_area("Enter your news content here", "", height=200)
+    predict_btt = st.button("Predict")
     if predict_btt:
-        prediction_class=fake_news(sentence)
-        print(prediction_class)
-        if prediction_class == [0]:
+        prediction_class = fake_news(sentence)
+        if prediction_class == 0:
             st.success('Reliable')
-        if prediction_class == [1]:
+        elif prediction_class == 1:
             st.warning('Unreliable')
+        else:
+            st.error('Invalid prediction result')
