@@ -7,9 +7,16 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 port_stem = PorterStemmer()
 vectorization = TfidfVectorizer()
 
-vector_form = pickle.load(open('vector.pkl', 'rb'))
-load_model = pickle.load(open('model.pkl', 'rb'))
 
+
+# Load the logistic regression model
+with open('model.pkl', 'rb') as file:
+    load_model = pickle.load(file)
+
+# Load the TF-IDF vectorizer
+with open('vector.pkl', 'rb') as file:
+    vector_form = pickle.load(file)
+    
 def stemming(content):
     con=re.sub('[^a-zA-Z]', ' ', content)
     con=con.lower()
