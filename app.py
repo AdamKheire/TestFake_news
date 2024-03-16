@@ -38,12 +38,13 @@ def fake_news(news):
     return prediction[0]
 
 if __name__ == '__main__':
+   
     # CSS for background image
     st.markdown(
         """
         <style>
         .reportview-container {
-            background: url('https://cdn.pixabay.com/photo/2020/02/26/11/24/fake-news-4881488_1280.jpg');
+            background: url('https://bsmedia.business-standard.com/_media/bs/img/article/2020-03/16/full/1584358219-7432.jpg?im=FeatureCrop,size=(803,452)');
             background-size: cover;
         }
         </style>
