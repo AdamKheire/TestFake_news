@@ -14,11 +14,11 @@ port_stem = PorterStemmer()
 vectorization = TfidfVectorizer()
 
 # Load the logistic regression model
-with open('model.pkl', 'rb') as file:
+with open('model1.pkl', 'rb') as file:
     load_model = pickle.load(file)
 
 # Load the TF-IDF vectorizer
-with open('vector.pkl', 'rb') as file:
+with open('vectorizer.pkl', 'rb') as file:
     vector_form = pickle.load(file)
     
 def stemming(content):
@@ -37,6 +37,18 @@ def fake_news(news):
     return prediction[0]
 
 if __name__ == '__main__':
+        # CSS for background image
+    st.markdown(
+        """
+        <style>
+        .reportview-container {
+            background: url('https://cdn.pixabay.com/photo/2020/02/26/11/24/fake-news-4881488_1280.jpg');
+            background-size: cover;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     st.title('Fake News Classification App')
     st.subheader("Input the News content below")
     sentence = st.text_area("Enter your news content here", "", height=200)
