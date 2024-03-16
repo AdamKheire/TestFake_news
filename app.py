@@ -5,6 +5,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
+import requests
 import base64
 
 
@@ -38,22 +39,25 @@ def fake_news(news):
     prediction = load_model.predict(vector_form1)
     return prediction[0]
 
-def set_background(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    bin_str = base64.b64encode(data).decode()
+def set_background(image_url):
+    response = requests.get(image_url)
+    if response.status_code == 200:
+        data = response.content
+        bin_str = base64.b64encode(data).decode()
 
-    page_bg_img = f"""
-    <style>
-    .stApp {{
-        background-image: url("data:image/jpeg;base64,{bin_str}");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }}
-    </style>
-    """
-    st.markdown(page_bg_img, unsafe_allow_html=True)
+        page_bg_img = f"""
+        <style>
+        .stApp {{
+            background-image: url("data:image/jpeg;base64,{bin_str}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }}
+        </style>
+        """
+        st.markdown(page_bg_img, unsafe_allow_html=True)
+    else:
+        st.error("Failed to load background image.")
 
 if __name__ == '__main__':
   # Set the background
