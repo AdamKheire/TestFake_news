@@ -61,7 +61,7 @@ def set_background(image_url):
 
 if __name__ == '__main__':
   # Set the background
-    set_background('https://img.freepik.com/free-photo/3d-abstract-background-with-flowing-dots-digital-landscape-modern-connections_1048-10497.jpg?size=626&ext=jpg&uid=R21978110&ga=GA1.1.1387133310.1702014596&semt=ais')
+    set_background('https://img.freepik.com/premium-vector/announcement-message-line-with-message-about-latest-news-air-futuristic-red-blue-background-with-abstract-lines-glowing-design-elements-vector-baner-illustration_159025-2710.jpg?size=626&ext=jpg&uid=R21978110&ga=GA1.1.1387133310.1702014596&semt=ais')
     #st.title('Fake News Classification App')
       # Header of the page
     html_temp = """
