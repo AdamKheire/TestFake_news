@@ -91,9 +91,12 @@ if __name__ == '__main__':
     )
     sentence = st.text_area("", "", height=200, key="textarea",)    
     #sentence = st.text_area("", "", height=200,)
-    predict_btt = st.button("Predict")
-    # Reset button
-    reset_btt = st.button("Reset")
+    # Prediction button and Reset button in the same row
+    col1, col2 = st.beta_columns(2)
+    with col1:
+        predict_btt = st.button("Predict")
+    with col2:
+        reset_btt = st.button("Reset")
     # Perform prediction if button is clicked and sentence is not empty
     if predict_btt:
         if not sentence.strip():
