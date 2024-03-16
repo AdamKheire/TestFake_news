@@ -92,6 +92,8 @@ if __name__ == '__main__':
     sentence = st.text_area("", "", height=200, key="textarea",)    
     #sentence = st.text_area("", "", height=200,)
     predict_btt = st.button("Predict")
+    # Reset button
+    reset_btt = st.button("Reset")
     # Perform prediction if button is clicked and sentence is not empty
     if predict_btt:
         if not sentence.strip():
@@ -104,3 +106,6 @@ if __name__ == '__main__':
                 st.success('Real News ✅ ')
             else:
                 st.error('Invalid prediction result')
+    # Reset text area if Reset button is clicked
+    if reset_btt:
+        sentence = ""
