@@ -73,7 +73,9 @@ if __name__ == '__main__':
     
     st.subheader("Enter your news content here")
     # Styling for the text area
-    st.markdown(
+
+    # Text area with custom styling
+     st.markdown(
         """
         <style>
         .text-area {
@@ -87,9 +89,7 @@ if __name__ == '__main__':
         """,
         unsafe_allow_html=True
     )
-    # Text area with custom styling
-    # Text area with custom styling
-    sentence = st.text_area("", "", height=200, class_='text-area')    
+    sentence = st.text_area("", "", height=200, key="textarea",)    
     #sentence = st.text_area("", "", height=200,)
     predict_btt = st.button("Predict")
     if predict_btt:
