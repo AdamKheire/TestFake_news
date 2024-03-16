@@ -96,13 +96,13 @@ if __name__ == '__main__':
     # Perform prediction if button is clicked and sentence is not empty
     if predict_btt:
         if not sentence.strip():
-            st.warning("Please input data to predict.")
+            st.warning("<span style='color: orange;'>Please input data to predict.</span>", unsafe_allow_html=True)
         else:
             prediction_class = fake_news(sentence)
             if prediction_class == 0:
-                st.warning('Fake News  ❌')
+                st.error("<span style='color: red;'>Fake News ❌</span>", unsafe_allow_html=True)
             elif prediction_class == 1:
-                st.success('Real News ✅ ')
+                st.success("<span style='color: green;'>Real News ✅</span>", unsafe_allow_html=True)
             else:
-                st.error('Invalid prediction result')
+                st.warning("<span style='color: orange;'>Invalid prediction result</span>", unsafe_allow_html=True)
  
