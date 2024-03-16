@@ -79,7 +79,7 @@ if __name__ == '__main__':
         """
         <style>
         .text-area {
-            background-color: #FFFFE0; /* Ivory */
+            background-color: #00FF00; /* Ivory */
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
