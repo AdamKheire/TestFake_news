@@ -94,15 +94,15 @@ if __name__ == '__main__':
     # Prediction button and Reset button in the same row
     predict_btt = st.button("predict")
     # Perform prediction if button is clicked and sentence is not empty
-    if predict_btt:
+      if predict_btt:
         if not sentence.strip():
-            st.warning("<span style='color: orange;'>Please input data to predict.</span>", unsafe_allow_html=True)
+            st.warning("Please input data to predict.")
         else:
             prediction_class = fake_news(sentence)
             if prediction_class == 0:
-                st.error("<span style='color: red;'>Fake News ❌</span>", unsafe_allow_html=True)
+                st.warning('Fake News  ❌')
             elif prediction_class == 1:
-                st.success("<span style='color: green;'>Real News ✅</span>", unsafe_allow_html=True)
+                st.success('Real News ✅ ')
             else:
-                st.warning("<span style='color: orange;'>Invalid prediction result</span>", unsafe_allow_html=True)
+                st.error('Invalid prediction result')
  
