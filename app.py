@@ -5,6 +5,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
+import base64
 
 
 # Download NLTK resources
@@ -37,20 +38,27 @@ def fake_news(news):
     prediction = load_model.predict(vector_form1)
     return prediction[0]
 
+def set_background(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    bin_str = base64.b64encode(data).decode()
+
+    page_bg_img = f"""
+    <style>
+    .stApp {{
+        background-image: url("data:image/jpeg;base64,{bin_str}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }}
+    </style>
+    """
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
 if __name__ == '__main__':
-   
-    # CSS for background image
-    st.markdown(
-        """
-        <style>
-        .reportview-container {
-            background: url('https://bsmedia.business-standard.com/_media/bs/img/article/2020-03/16/full/1584358219-7432.jpg?im=FeatureCrop,size=(803,452)');
-            background-size: cover;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+  # Set the background
+    set_background('https://cdn.pixabay.com/photo/2020/02/26/11/24/fake-news-4881488_1280.jpg')
+    
     st.title('Fake News Classification App')
     st.subheader("Input the News content below")
     sentence = st.text_area("Enter your news content here", "", height=200)
