@@ -75,7 +75,7 @@ if __name__ == '__main__':
     # Styling for the text area
 
     # Text area with custom styling
-     st.markdown(
+    st.markdown(
         """
         <style>
         .text-area {
