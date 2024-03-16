@@ -95,14 +95,14 @@ if __name__ == '__main__':
     predict_btt = st.button("predict")
     # Perform prediction if button is clicked and sentence is not empty
 if predict_btt:
-if not sentence.strip():
-    st.warning("Please input data to predict.")
-else:
-    prediction_class = fake_news(sentence)
-    if prediction_class == 0:
-        st.warning('Fake News  ❌')
-    elif prediction_class == 1:
-        st.success('Real News ✅ ')
+    if not sentence.strip():
+        st.warning("Please input data to predict.")
     else:
-        st.error('Invalid prediction result')
+        prediction_class = fake_news(sentence)
+        if prediction_class == 0:
+            st.warning('Fake News  ❌')
+        elif prediction_class == 1:
+            st.success('Real News ✅ ')
+        else:
+            st.error('Invalid prediction result')
  
