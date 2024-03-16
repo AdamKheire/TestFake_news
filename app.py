@@ -72,8 +72,25 @@ if __name__ == '__main__':
     st.markdown(html_temp, unsafe_allow_html=True)
     
     st.subheader("Enter your news content here")
+    # Styling for the text area
+    st.markdown(
+        """
+        <style>
+        .text-area {
+            background-color: #FFFFE0; /* Ivory */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     # Text area with custom styling
-    sentence = st.text_area("", "", height=200,)
+    # Text area with custom styling
+    sentence = st.text_area("", "", height=200, class_='text-area')    
+    #sentence = st.text_area("", "", height=200,)
     predict_btt = st.button("Predict")
     if predict_btt:
         prediction_class = fake_news(sentence)
