@@ -65,6 +65,7 @@ if __name__ == '__main__':
     
     st.title('Fake News Classification App')
     st.subheader("Enter your news content here")
+    sentence = st.text_area("",height=200)
     predict_btt = st.button("Predict")
     if predict_btt:
         prediction_class = fake_news(sentence)
